@@ -1,0 +1,45 @@
+@import "tailwindcss";
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Inter:wght@400;500;600&display=swap');
+
+@theme {
+  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+  --font-headline: "Plus Jakarta Sans", sans-serif;
+
+  --color-primary: #00654e;
+  --color-primary-container: #008064;
+  --color-secondary: #186a5f;
+  --color-secondary-container: #a6f1e3;
+  --color-surface: #f5faff;
+  --color-surface-container: #e5eff8;
+  --color-surface-container-low: #eaf5fe;
+  --color-surface-container-high: #dfeaf2;
+  --color-surface-container-highest: #d9e4ec;
+  --color-on-surface: #131d23;
+  --color-on-surface-variant: #3e4945;
+  --color-outline: #6e7a75;
+  --color-outline-variant: #bdc9c4;
+}
+
+@layer base {
+  body {
+    @apply bg-surface font-sans text-on-surface;
+  }
+}
+
+.glass-panel {
+  background: rgba(255, 255, 255, 0.7);
+  backdrop-filter: blur(12px);
+}
+
+.dark .glass-panel {
+  background: rgba(13, 31, 27, 0.7);
+  backdrop-filter: blur(12px);
+}
+
+.material-symbols-outlined {
+  font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+}
+
+.fill-icon {
+  font-variation-settings: 'FILL' 1;
+}
